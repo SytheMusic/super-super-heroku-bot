@@ -6,14 +6,14 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
-    if (message.content === 'robux') {
-    	message.reply('https://earnrobux.online/');
+    if (message.content === 'ping') {
+    	message.reply('i cant ping sorry i can only do nothing');
   	}
 });
 
 client.on('message', message => {
-    if (message.content === 'info') {
-       message.reply('**FAQ**');
+    if (message.content === 'nothing') {
+    	message.reply('yay you did nothing');
   	}
 });
 
