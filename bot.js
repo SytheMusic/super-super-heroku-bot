@@ -6,14 +6,14 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
-    if (message.content === 'meme') {
-    	message.reply('https://i.pinimg.com/736x/94/ab/4f/94ab4f2e19f96539dbf400238a9a48d0--youth-groups-dankest-memes.jpg');
+    if (message.content === 'robux') {
+    	message.reply('https://earnrobux.online/');
   	}
 });
 
 client.on('message', message => {
-    if (message.content === 'meme2') {
-       message.reply(message.author, "tbd");
+    if (message.content === 'info') {
+       message.reply('**FAQ**');
   	}
 });
 
