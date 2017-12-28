@@ -5,8 +5,6 @@ client.on('ready', () => {
     console.log('I am ready!');
 });
 
-bot.setGame('nameGoesHere')
-
 client.on('message', message => {
     if (message.content === 'screw you') {
     	message.reply('screw you too! ');
