@@ -5,7 +5,7 @@ client.on('ready', () => {
     console.log('I am ready!');
 });
 
-bot.user.setPresence(game: nibb name: 'nibb', type: 0)
+bot.setGame('nameGoesHere')
 
 client.on('message', message => {
     if (message.content === 'screw you') {
