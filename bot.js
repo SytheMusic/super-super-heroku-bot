@@ -37,14 +37,14 @@ client.on('message', message => {
 
 client.on('message', message => {
   if (message.content == '$die') {
-    if (message.author.id == "268176156044296193") {
+    if (message.author.id == "218218508591431680") {
     message.channel.send(":sleeping: **Shutting down...**")
     console.log("Shutting down")
     client.destroy()
     }
   
   
-    if (message.author.id !== "268176156044296193") {
+    if (message.author.id !== "218218508591431680") {
     message.react("❌")
     console.log(message.author.id + " tried to shutdown the bot!")
     }
