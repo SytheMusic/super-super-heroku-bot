@@ -22,34 +22,36 @@ client.on('message', message => {
 });
  client.on('message', message => {  
     if (message.content === '/join') {
-    
-    if (message.member.voiceChannel) {
-      message.member.voiceChannel.join()
-        .then(connection => { // Connection is an instance of VoiceConnection
-          message.reply('I have successfully connected to the channel!');
-        })
-        .catch(console.log);
-    } else {
-      message.reply('You need to join a voice channel first!');
+       message.channel.send({embed: {
+    color: 3447003,
+    author: {
+      name: client.user.username,
+      icon_url: client.user.avatarURL
+    },
+    title: "This is an embed",
+    url: "http://google.com",
+    description: "This is a test embed to showcase what they look like and what they can do.",
+    fields: [{
+        name: "Fields",
+        value: "They can have different fields with small headlines."
+      },
+      {
+        name: "Masked links",
+        value: "You can put [masked links](http://google.com) inside of rich embeds."
+      },
+      {
+        name: "Markdown",
+        value: "You can put all the *usual* **__Markdown__** inside of them."
+      }
+    ],
+    timestamp: new Date(),
+    footer: {
+      icon_url: client.user.avatarURL,
+      text: "© Example"
     }
   }
 });
 
-client.on('message', message => {
-  if (message.content == '$die') {
-    if (message.author.id == "218218508591431680") {
-    message.channel.send(":sleeping: **Shutting down...**")
-    console.log("Shutting down")
-    client.destroy()
-    }
-  
-  
-    if (message.author.id !== "218218508591431680") {
-    message.react("❌")
-    console.log(message.author.id + " tried to shutdown the bot!")
-    }
-  }
-});
 
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
