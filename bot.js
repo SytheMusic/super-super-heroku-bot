@@ -3,7 +3,9 @@ const client = new Discord.Client();
 
 client.on('ready', () => {
     console.log('I am ready!');
+    client.setStatus('online', 'Call of Duty: Black Ops 10');
 });
+
 
 client.on('message', message => {
     if (message.content === '!submit') {
